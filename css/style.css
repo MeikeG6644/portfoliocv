@@ -94,7 +94,7 @@ header {
 
 .menulist li {
     display: block;
-    
+
     margin: 1.5em 0;
 }
 
@@ -117,13 +117,11 @@ header .logo p {
     font-size: 1.25em;
     color: var(--color-accent);
     margin: 0;
-    /* Remove default margins */
 }
 
 header .logo p span {
     color: var(--color-dark);
     margin-right: -0.22em;
-    /* Adjust spacing */
 }
 
 /* Hamburger menu open */
@@ -1063,9 +1061,7 @@ textarea:focus {
     margin: 1.5em 0 2em 0;
 }
 
-.project3 main section:nth-of-type(3) div:last-of-type {
-
-}
+.project3 main section:nth-of-type(3) div:last-of-type {}
 
 .project3 main section:nth-of-type(3) div:last-of-type img {
     width: 30%;
@@ -1145,5 +1141,321 @@ footer > div:last-of-type > div img {
 
 @media only screen and (min-width: 768px) {
 
+    body {
+        margin: 0;
 
+        background-color: var(--color-light);
+
+        font-family: var(--text);
+        color: var(--color-dark);
+    }
+
+    h2 {
+        margin: 0;
+        padding: 2em 0 1.5em 0;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.25em;
+    }
+
+    header {
+        margin: 0;
+        padding: 0 1em;
+
+        font-size: 1.25em;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+        align-items: center;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .menu {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .menulist {
+        display: flex;
+        justify-content: flex-start;
+        gap: 3em;
+    }
+
+    .menulist li a {
+        font-weight: 600;
+    }
+
+    header .logo {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+
+
+
+
+
+
+
+
+    /********************/
+    /**** MAIN INDEX ****/
+    /********************/
+
+    section {
+        padding: 0 1.5em;
+    }
+
+
+
+
+    /* About Me */
+
+    /*Geen aanpassingen*/
+
+
+
+
+    /* Design Skills */
+
+    /*Geen aanpassingen*/
+
+
+
+
+    /* Portfolio */
+
+    .projects {
+        margin-bottom: 121em;
+    }
+
+    .items {
+        position: absolute;
+        top: 75%;
+
+        margin: 0 1em;
+    }
+
+    #loods5 > div > div h3,
+    #doededate > div > div h3,
+    #projectinteractie > div > div h3 {
+        font-size: 1.25em;
+    }
+
+    #loods5 > div > div p,
+    #doededate > div > div p,
+    #projectinteractie > div > div p {
+        margin: 0.75em 0;
+    }
+
+    #loods5 i,
+    #doededate i,
+    #projectinteractie i {
+        color: var(--color-light);
+        font-size: 1.5em;
+
+        background-color: var(--color-hover);
+
+        padding: .75em;
+
+        border-radius: 250px;
+
+        transform: rotate(-45deg)
+    }
+
+
+
+
+    /* Contact Opnemen */
+
+    .contact > p {
+        width: 60%;
+        line-height: 1.75em;
+    }
+
+    .contact > div:first-of-type > div i {
+        font-size: 1.25em;
+    }
+
+
+
+
+
+
+
+
+
+    /******************/
+    /**** ABOUT ME ****/
+    /******************/
+
+    /*** Zie About me & Design skills bij MAIN INDEX ***/
+
+    .education h2,
+    .workexp h2 {
+        padding-bottom: 1em;
+    }
+
+    .education h4,
+    .workexp h4 {
+        font-size: 1.25em;
+    }
+
+    .education i,
+    .workexp i {
+        font-size: 1.25em;
+    }
+
+
+
+
+
+
+
+
+
+    /**********************/
+    /*** PORTFOLIO PAGE ***/
+    /**********************/
+
+    /*** Zie Portfolio bij MAIN INDEX ***/
+
+    .portfolio .projects {
+        margin-bottom: 121em;
+    }
+
+
+
+
+
+
+
+
+
+    /*****************/
+    /*** PROJECT 1 ***/
+    /*****************/
+
+    .project1 main section:first-of-type h1,
+    .project1 main section:first-of-type h2 {
+        margin-right: 10em;
+    }
+
+    .project1 main section:first-of-type h1 {
+        font-size: 2em;
+        margin-bottom: .5em;
+    }
+
+    .project1 main section:first-of-type h2 {
+        margin-bottom: .5em;
+    }
+
+    .project1 main section:nth-of-type(2) div:last-of-type a {
+        font-size: 1.25em;
+    }
+
+    .project1 main section:last-of-type div:nth-of-type(2),
+    .project1 main section:last-of-type div:last-of-type {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .project1 main section:last-of-type div:nth-of-type(2) img,
+    .project1 main section:last-of-type div:last-of-type img {
+        width: 48%;
+        margin: 0
+    }
+
+
+
+
+
+
+
+
+
+    /*****************/
+    /*** PROJECT 2 ***/
+    /*****************/
+
+    .project2 main section:first-of-type h1,
+    .project2 main section:first-of-type h2 {
+        margin-right: 10em;
+    }
+
+    .project2 main section:first-of-type h1 {
+        font-size: 2em;
+        margin-bottom: .5em;
+    }
+
+    .project2 main section:first-of-type h2 {
+        margin-bottom: .5em;
+    }
+
+    .project2 main section:nth-of-type(2) div:last-of-type a {
+        font-size: 1.25em;
+    }
+
+
+
+
+
+
+
+
+
+    /*****************/
+    /*** PROJECT 3 ***/
+    /*****************/
+
+    .project3 main section:first-of-type h1,
+    .project3 main section:first-of-type h2 {
+        margin-right: 10em;
+    }
+
+    .project3 main section:first-of-type h1 {
+        font-size: 2em;
+        margin-bottom: .5em;
+    }
+
+    .project3 main section:first-of-type h2 {
+        margin-bottom: .5em;
+    }
+
+    .project3 main section:nth-of-type(2) div:last-of-type a {
+        font-size: 1.25em;
+    }
+
+
+
+
+
+
+
+
+
+    /*****************/
+    /**** FOOTER ****/
+    /****************/
+
+    footer > div:first-of-type {
+        padding: 0 5em;
+    }
+
+    footer > div:last-of-type > div {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1.5em 10em 2em;
+    }
 }

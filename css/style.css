@@ -1459,3 +1459,22 @@ footer > div:last-of-type > div img {
         padding: 1.5em 10em 2em;
     }
 }
+
+
+
+
+
+
+
+/* Voor iPad Pro */
+
+@media only screen and (min-width: 1024px) {
+
+    .projects{
+        margin-bottom: 153em;
+    }
+
+    .portfolio .projects {
+        margin-bottom: 153em;
+    }
+}

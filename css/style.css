@@ -1502,4 +1502,132 @@ footer > div:last-of-type > div img {
 
 /* Voor Laptops en "kleine" Desktops */
 
-@media only screen and (min-width: 1920px) {}
+@media only screen and (min-width: 1920px) {
+
+    main section {
+        padding: 0 8em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    header .logo p {
+        font-size: 1.75em;
+    }
+
+    header .menulist {
+        gap: 7em;
+    }
+
+    header .menulist li {
+        font-size: 1.5em;
+
+        margin: 1.25em 0;
+    }
+
+    header .menulist li a {
+        transition: 0.5s ease-in;
+    }
+
+    header .menulist li:hover a {
+        color: var(--color-hover);
+        transition: 0.5s ease-in;
+    }
+
+
+
+    /*    homepagina*/
+
+    .home .ux-ui {
+        /*        border: 3px solid red;*/
+        display: flex;
+    }
+
+    .home .ux-ui div img {
+        display: block;
+        width: 70%;
+
+        margin: 21.75em 0 0 15em;
+    }
+
+    .projects {
+        margin-bottom: 105em;
+    }
+
+    .design-skills .skills {
+        display: flex;
+        justify-content: space-between;
+        gap: 8em;
+        margin-bottom: 3em;
+    }
+
+    .design-skills .skills .links {
+        width: 100%;
+    }
+
+    .design-skills .skills .links div:first-of-type {
+        margin: 0;
+    }
+
+    .design-skills .skills .rechts {
+        width: 100%;
+
+        margin: 0;
+    }
+
+    .projects .items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-gap: 2em;
+    }
+
+    .projects .items > a > div img {
+        min-height: 670px;
+        max-height: 670px;
+    }
+
+    #loods5 {
+        grid-column: 1;
+        grid-row: 1;
+
+    }
+
+    #doededate {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #projectinteractie {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+
+    /*    aboutme   */
+
+    .aboutme .education h4,
+    .aboutme .workexp h4 {
+        font-size: 1.5em;
+    }
+    
+    
+/*    portfolio   */
+    
+    .portfolio .projects {
+        margin-bottom: 105em;
+    }
+    
+
+    footer > div:first-of-type {
+        padding: 0 35em;
+    }
+
+    footer > div:last-of-type > div {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1.5em 55em 2em;
+    }
+    
+}

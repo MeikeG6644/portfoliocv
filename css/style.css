@@ -1466,15 +1466,40 @@ footer > div:last-of-type > div img {
 
 
 
+
+
 /* Voor iPad Pro */
 
 @media only screen and (min-width: 1024px) {
 
-    .projects{
-        margin-bottom: 153em;
+    .projects {
+        margin-bottom: 155em;
     }
 
     .portfolio .projects {
-        margin-bottom: 153em;
+        margin-bottom: 155em;
+    }
+
+    footer > div:first-of-type {
+        padding: 0 5em;
+    }
+
+    footer > div:last-of-type > div {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1.5em 18em 2em;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* Voor Laptops en "kleine" Desktops */
+
+@media only screen and (min-width: 1920px) {}

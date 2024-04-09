@@ -3,59 +3,62 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Project Loods5</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>MDesign</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-4o5FQUS2ZL9R41i+3Z5RSkk2K+N/dP5S6tBkkcc5PiY6pom0UKFqIE1aG6Dz6Q2Qf6PDeYVXefXTI3r3vXNAYg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="icon" href="images/logo.png">
 </head>
 
+
 <body class="portfolio">
-<header>
-        <a href="index.html">
-            <h1>MDesign</h1>
-        </a>
-        <nav class="navbar">
-            <div class="hamburger" id="hamburger">
+    <header>
+        <div class="navbar">
+            <div class="toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="nav-links" id="nav-links">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="aboutme.html">About</a>
-                </li>
-                <li>
-                    <a href="portfolio.html">Portfolio</a>
-                </li>
-            </ul>
-        </nav>
+
+            <div>
+                <a href="index.html" class="logo">
+                    <p><span>M</span>Design</p>
+                </a>
+            </div>
+
+            <div class="menu">
+                <ul class="menulist">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <main>
-        <div class="projects">
+        <section class="projects">
             <div>
-                <h3>Portfolio</h3>
+                <h2>Portfolio</h2>
                 <p>Ontdek mijn groeiende portfolio als beginnende UI/UX-designer, met creatieve oplossingen en frisse ideeën om digitale ervaringen te verbeteren. Verwacht innovatieve ontwerpen en aandacht voor gebruikersbehoeften.</p>
             </div>
 
-            <div>
+            <div class="items">
                 <a href="loods5.html" id="loods5">
                     <div>
                         <img src="images/loods5_mockup.png" alt="">
 
                         <div>
                             <div>
-                                <h4>Loods5 Replica</h4>
+                                <h3>Loods5 Replica</h3>
                                 <p>HTML / CSS</p>
                             </div>
 
@@ -66,12 +69,12 @@
                     </div>
                 </a>
 
-                <a href="boekenzoeker.html" id="boekenzoeker">
+                <a href="doededate.html" id="doededate">
                     <div>
-                        <img src="images/boekenzoeker_mockup.png" alt="">
+                        <img src="images/project_individueel2_mockup2.png" alt="">
                         <div>
                             <div>
-                                <h4>Boekenzoeker</h4>
+                                <h3>Doe de date</h3>
                                 <p>UX Research, App Design</p>
                             </div>
 
@@ -81,29 +84,43 @@
                         </div>
                     </div>
                 </a>
-            </div>
-        </div>
-    </main>
 
-<footer>
+                <a href="projectinteractie.html" id="projectinteractie">
+                    <div>
+                        <img src="images/booknook_mockup.png" alt="">
+                        <div>
+                            <div>
+                                <h3>Project Interactie</h3>
+                                <p>Interaction Design, Prototyping</p>
+                            </div>
+
+                            <div>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
         <div>
-            <a href="aboutme.html">About</a>
-            <a href="index.html">MDesign</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="aboutme.html">
+                <p>About</p>
+            </a>
+            <a href="index.html">
+                <p><span>M</span>Design</p>
+            </a>
+            <a href="portfolio.html">
+                <p>Portfolio</p>
+            </a>
         </div>
 
         <div>
             <p>Volg me op social media</p>
             <div>
-                <a href="https://www.linkedin.com/in/meike-gravesteijn-601bb1213/">
-                    <i class="fa fa-linkedin-square"></i>
-                </a>
-                <a href="https://www.instagram.com/meikegdn/">
-                    <i class="fa fa-instagram"></i>
-                </a>
-                <a href="https://magnet.me/nl-NL/profiel/483927">
-                    <img src="images/magnet_me_logo_wit.png">
-                </a>
+                <a href="https://www.linkedin.com/in/meike-gravesteijn-601bb1213/"><img src="images/linkedin_white.png" alt=""></a>
+                <a href="https://www.instagram.com/meikegdn/"><img src="images/instagram_white.png" alt=""></a>
             </div>
         </div>
     </footer>

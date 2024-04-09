@@ -1,515 +1,409 @@
-:root {
-    --background-color: #FCFCFC;
-    --background-blue: #DADEF2;
-    --accent-color: #3E54CB;
-    --text-dark: #1F1F1F;
-    --text-light: #FCFCFC;
-    --hover: #001799;
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
 
-/****************/
-/*** MAIN CSS ***/
-/****************/
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+    --color-light: #FCFCFC;
+    --color-dark: #1F1F1F;
+    --color-hover: #001799;
+    --background: #DADEF2;
+    --color-accent: #3E54CB;
+    --text: 'Montserrat';
+    --logo: 'Inter';
+}
 
+
+/***********/
+/* STYLING */
+/***********/
 body {
     margin: 0;
-    padding: 0;
 
-    background-color: var(--background-color);
+    background-color: var(--color-light);
 
-    font-family: 'Montserrat', sans-serif;
-    color: var(--text-dark);
+    font-family: var(--text);
+    color: var(--color-dark);
 }
 
-
-
-
-h3 {
-    text-align: center;
-    font-size: 2.25em;
-
+h2 {
     margin: 0;
-    padding: 2em 0 0 0;
+    padding: 2em 0 1.5em 0;
+    font-size: 1.5em;
+    text-align: center;
 }
-
-
-
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0 5em 0 5em;
-
-    background-color: var(--background-blue);
-
-    height: 15vh;
-}
-
-header a {
-    text-decoration: none;
-}
-
-header h1 {
     margin: 0;
-    padding: 0;
+    padding: 1.5em 1em .5em 1em;
 
-    font-family: 'Inter', sans-serif;
-    color: var(--accent-color);
-    font-size: 1.875em;
-    font-weight: 600;
-}
+    background-color: var(--background);
 
-header h1::first-letter {
-    color: var(--text-dark);
-    letter-spacing: -.175em;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    width: 25vw;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 700;
-    font-size: 1.125em;
-
-    transition: .25s;
-}
-
-header nav ul li a:hover {
-    color: var(--hover);
-
-    transition: .25s;
-}
-
-
-
-
-footer {
-    background-color: var(--text-dark);
-    color: var(--text-light);
-
-    margin: 0;
-    padding: 0;
-}
-
-footer a {
-    text-decoration: none;
-    color: var(--text-light);
-}
-
-footer > div:first-of-type {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3em;
-}
-
-footer > div:first-of-type a {
-    margin: 3.5em 0 2em;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
-    font-weight: 600;
-
-    transition: 0.25s;
-}
-
-footer > div:first-of-type a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--text-light);
-
-    transition: 0.25s;
-}
-
-footer > div:first-of-type a:nth-of-type(2) {
-    font-family: 'Inter', sans-serif;
-    color: var(--accent-color);
-    font-size: 1.5em;
-    font-weight: 600;
-}
-
-footer > div:first-of-type a:nth-of-type(2)::first-letter {
-    color: var(--text-light);
-    letter-spacing: -.15em;
-}
-
-footer > div:last-of-type {
-    text-align: center;
-}
-
-footer > div:last-of-type div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3em;
-
-    margin: 1.75em 0 0;
-    padding: 0 0 2em 0;
-}
-
-footer > div:last-of-type div a {
-    height: 1.5em;
-    width: 1.5em
-}
-
-footer > div:last-of-type div a i {
-    color: var(--text-light);
-    font-size: 1.5em;
-}
-
-footer > div:last-of-type div a img {
-    height: inherit;
-}
-
-.portfolio footer {
-    margin-top: 20em;
-}
-
-
-
-
-
-
-
-
-
-/*****************/
-/*** HOME PAGE ***/
-/*****************/
-
-/*** UX / UI Ontwerper ***/
-
-.ux-ui {
-    background-color: var(--background-blue);
-
-    display: flex;
-    justify-content: space-between;
-
-    padding: 0 10em 0 10em;
-
-    position: relative;
-
-    height: 85vh;
-}
-
-.ux-ui section:first-of-type {
-    width: 25vw;
-
-    margin-top: 4em;
-}
-
-.ux-ui section:first-of-type p:first-of-type {
-    font-size: 1.25em;
-    margin-bottom: 4em;
-}
-
-.ux-ui section:first-of-type h2 {
-    font-size: 3em;
-    font-weight: 700;
-}
-
-.ux-ui section:first-of-type h2 span {
-    color: var(--accent-color);
-}
-
-.ux-ui section:first-of-type p:last-of-type {
     font-size: 1em;
+    font-weight: 600;
+    color: var(--color-dark);
 }
 
-.ux-ui section:last-of-type {
-    width: 40em;
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: .5em;
+    grid-template-rows: auto auto;
 }
 
-.ux-ui section:last-of-type img {
-    width: 45em;
-
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-}
-
-
-
-
-/*** About ***/
-
-.about-me {
-    background-color: var(--text-dark);
-
-    color: var(--text-light);
-
-    height: 22em;
-}
-
-.about-me p {
-    padding: 2em 25em 0 25em;
-    margin: 0;
-}
-
-
-
-
-/*** Design Skills ***/
-
-.design-skills {
-    height: 35em;
-}
-
-.design-skills > p {
-    padding: 2em 25em 3em 25em;
-    margin: 0;
-}
-
-.design-skills > div {
+.toggle {
     display: flex;
+    gap: .5em;
+    flex-direction: column;
     justify-content: space-between;
+    width: 2em;
+    height: 1.75em;
+    cursor: pointer;
 
-    margin: 0 10em;
+    grid-column: 1;
+    grid-row: 1;
 }
 
-.design-skills > div ul {
+.bar {
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--color-dark);
+    transition: all 0.3s ease;
+}
+
+.menu {
+    grid-column: span 2;
+    grid-row: 2;
+}
+
+.menulist {
+    display: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.design-skills > div ul li > p {
-    margin-bottom: 0.5em;
-}
-
-.design-skills > div ul li p {
-    font-weight: 600;
-}
-
-.design-skills > div ul li div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    height: 2vh;
-    width: 35vw;
-}
-
-.design-skills .line-container {
-    width: 32vw;
-    height: 1.5vh;
-
-    position: relative;
-}
-
-.design-skills .line-container .bottom {
-    background-color: var(--background-blue);
-
-    width: 100%;
-    height: 100%;
-
-    display: block;
-}
-
-.design-skills .line-container .figma,
-.xd,
-.illustrator,
-.aftereffects,
-.prototyping,
-.code,
-.research,
-.interaction {
-    background-color: var(--accent-color);
-
-    width: 65%;
-    height: 100%;
-
+.menulist li {
     display: block;
 
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin: 1.5em 0;
 }
 
-.xd {
-    width: 75%;
+.menulist li a {
+    color: var(--color-dark);
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
 }
 
-.illustrator {
-    width: 55%;
+header .logo {
+    text-decoration: none;
+    text-align: end;
+
+    grid-column: 2;
+    grid-row: 1;
 }
 
-.aftereffects {
-    width: 60%;
-}
-
-.prototyping {
-    width: 75%;
-}
-
-.code {
-    70%;
-}
-
-.research {
-    width: 80%;
-}
-
-.interaction {
-    width: 60%;
-}
-
-
-
-
-/*** Portfolio ***/
-
-.projects {
-    height: 85vh;
-
-    position: relative;
-}
-
-.projects > div:first-of-type {
-    background-color: var(--background-blue);
-
-    height: 25em;
-}
-
-.projects > div:first-of-type p {
-    padding: 2em 25em 5em 25em;
+header .logo p {
+    font-size: 1.25em;
+    color: var(--color-accent);
     margin: 0;
 }
 
-.projects > div:last-of-type {
-    display: flex;
-    gap: 8vw;
+header .logo p span {
+    color: var(--color-dark);
+    margin-right: -0.22em;
+}
 
+/* Hamburger menu open */
+
+.active .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.active .bar:nth-child(3) {
+    transform: translateY(-18px) rotate(-45deg);
+}
+
+.active .menulist {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/********************/
+/**** MAIN INDEX ****/
+/********************/
+
+section {
+    padding: 0 1em 0 1em;
+}
+
+.home main section > p:first-of-type {
+    margin-top: 0;
+}
+
+.ux-ui {
+    background-color: var(--background);
+}
+
+.ux-ui p:first-of-type {
+    margin: 0;
+    padding-top: 10em;
+}
+
+.ux-ui h1 {
+    margin: 3em 0 .75em 0;
+
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.ux-ui h1 span {
+    color: var(--color-accent);
+}
+
+.ux-ui p:last-of-type {
+    padding-bottom: 5em;
+
+    margin: 0;
+}
+
+.ux-ui img {
+    display: none;
+}
+
+
+
+
+/* About Me */
+
+.about-me {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding-bottom: 3em;
+}
+
+
+
+
+/* Design Skills */
+
+.design-skills .skills .links > div:first-of-type {
+    margin-top: 3em;
+}
+
+.design-skills .skills > div > div > p:first-of-type {
+    margin-bottom: 0;
+}
+
+.design-skills .skills .links > div .progress-container,
+.design-skills .skills .rechts > div .progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.design-skills .skills .links > div .progress-container > div:first-of-type,
+.design-skills .skills .rechts > div .progress-container > div:first-of-type {
+    position: relative;
+
+    height: 1em;
+    width: 88%;
+}
+
+.design-skills .skills .links > div .progress-container > div:first-of-type .progress-color,
+.design-skills .skills .rechts > div .progress-container > div:first-of-type .progress-color {
     position: absolute;
-    bottom: 5vh;
-    left: 17vw;
-
+    top: 0;
+    left: 0;
+    background-color: var(--color-hover);
+    height: 100%;
+    z-index: 2;
+    border-radius: 15px;
 }
 
-.projects > div:last-of-type a div img {
-    width: 28vw;
-    border-radius: 5px;
+.design-skills .skills .links > div:first-of-type .progress-container > div .progress-color {
+    width: 80%;
 }
 
-#loods5 {
-    width: 30vw;
-    height: 53vh;
-    background: linear-gradient(to bottom right, rgba(252, 252, 252, 0.4), rgba(252, 252, 252, 0.1));
-    border-radius: 10px;
-    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+.design-skills .skills .links > div:nth-of-type(2) .progress-container > div .progress-color {
+    width: 80%;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.design-skills .skills .links > div:nth-of-type(3) .progress-container > div .progress-color {
+    width: 65%;
+}
 
+.design-skills .skills .links > div:last-of-type .progress-container > div .progress-color {
+    width: 65%;
+}
+
+.design-skills .skills .rechts > div:first-of-type .progress-container > div .progress-color {
+    width: 75%;
+}
+
+.design-skills .skills .rechts > div:nth-of-type(2) .progress-container > div .progress-color {
+    width: 85%;
+}
+
+.design-skills .skills .rechts > div:nth-of-type(3) .progress-container > div .progress-color {
+    width: 80%;
+}
+
+.design-skills .skills .rechts > div:last-of-type .progress-container > div .progress-color {
+    width: 70%;
+}
+
+.design-skills .skills .rechts {
+    margin-bottom: 3em;
+}
+
+.design-skills .skills .links > div .progress-container > div:first-of-type .progress-bar,
+.design-skills .skills .rechts > div .progress-container > div:first-of-type .progress-bar {
+    position: relative;
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+
+
+
+/* Portfolio */
+
+.projects {
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+
+    margin-bottom: 67em;
+}
+
+.items {
+    position: absolute;
+    top: 70%;
+}
+
+.projects > div:first-of-type {
+    background-color: var(--background);
+
+    height: 25em;
+    padding: 0 1em 0 1em;
+}
+
+.projects > div > p {
+    margin: 0 0 3em 0;
+}
+
+.projects .items a {
     text-decoration: none;
-    color: var(--text-dark);
-
-    transition: 0.3s ease;
+    color: var(--color-dark);
 }
 
-#boekenzoeker {
-    width: 30vw;
-    height: 53vh;
-    background: linear-gradient(to bottom right, rgba(252, 252, 252, 0.4), rgba(252, 252, 252, 0.1));
-    border-radius: 10px;
-    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+.projects .items a > div {
+    background: linear-gradient(135deg, rgba(252, 252, 252, 0.4), rgba(252, 252, 252, 0.1));
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: .75em;
+    transition: 0.5s ease-in;
+}
 
+.projects .items a > div img {
+    width: 100%;
+    border-radius: .75em;
+}
+
+#loods5 > div:last-of-type,
+#doededate > div:last-of-type,
+#projectinteractie > div:last-of-type {
+    padding: 0.75em .75em .75em .75em;
+    margin: 0 .75em 3em;
+}
+
+#loods5 > div > div,
+#doededate > div > div,
+#projectinteractie > div > div {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-    text-decoration: none;
-    color: var(--text-dark);
-
-    transition: 0.25s;
 }
 
-#loods5 div div i,
-#boekenzoeker div div i {
-    color: var(--text-light);
+#loods5 > div > div h3,
+#doededate > div > div h3,
+#projectinteractie > div > div h3 {
+    margin: 1em 0 0 0;
+    padding: 0;
+}
 
-    background-color: var(--hover);
+#loods5 > div > div p,
+#doededate > div > div p,
+#projectinteractie > div > div p {
+    margin: 0.75em 0;
+}
+
+#loods5 i,
+#doededate i,
+#projectinteractie i {
+    color: var(--color-light);
+
+    background-color: var(--color-hover);
 
     padding: .5em .55em;
 
     border-radius: 150px;
 
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-
     transform: rotate(-45deg)
 }
 
-#loods5:hover,
-#boekenzoeker:hover {
-    background: linear-gradient(to bottom right, rgba(205, 205, 205, 0.4), rgba(205, 205, 205, 0.1));
-    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-
-    transition: 0.25s;
-}
 
 
 
-
-/*** Contact ***/
+/* Contact Opnemen */
 
 .contact {
-    margin-top: 5em;
-
-    background-color: var(--background-blue);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0 20em 3em 20em;
+    background-color: var(--background);
+    padding-bottom: 3em;
 }
 
-.contact h3 {
+.contact h2 {
     text-align: left;
 }
 
 .contact > div:first-of-type {
-    width: 25em;
+    width: 100%;
 }
 
 .contact > div:first-of-type > div {
-    margin-top: 3.5em;
-}
-
-.contact > div:first-of-type i {
     display: flex;
     align-items: center;
     gap: 1.5em;
 
-    width: 10em;
 }
 
-.contact > div:first-of-type > div div {
-    display: flex;
-    align-items: center;
-    gap: 2em;
-}
-
-.contact > div:first-of-type > div div i {
-    width: 1em;
+.contact > div:first-of-type > div i {
+    font-size: 1em;
 }
 
 .contact .mirrored-icon {
@@ -529,9 +423,9 @@ footer > div:last-of-type div a img {
     border-radius: 5px;
 
     height: 2.5em;
-    width: 40em;
+    width: 100%;
 
-    padding: .5em 1em;
+    padding: .75em 1em;
 }
 
 .contact > div:last-of-type form textarea {
@@ -543,9 +437,9 @@ footer > div:last-of-type div a img {
     border-radius: 5px;
 
     height: 12.5em;
-    width: 40em;
+    width: 100%;
 
-    padding: .5em 1em;
+    padding: .75em 1em;
 
     resize: none;
 }
@@ -555,27 +449,24 @@ textarea:focus {
     outline: none;
 }
 
-.contact > div:last-of-type form button {
+.contact form button {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    color: var(--text-light);
-
-    background-color: var(--accent-color);
-
+    color: var(--color-light);
+    background-color: var(--color-accent);
     border-radius: 3px;
     border: none;
-
     padding: .75em 2.75em;
     margin-top: 1em;
+    transition: .25s;
+}
+
+.contact form button:hover {
+    background-color: var(--color-hover);
 
     transition: .25s;
 }
 
-.contact > div:last-of-type form button:hover {
-    background-color: var(--hover);
-
-    transition: .25s;
-}
 
 
 
@@ -584,212 +475,85 @@ textarea:focus {
 
 
 
+/******************/
+/**** ABOUT ME ****/
+/******************/
 
-/********************/
-/*** ABOU ME PAGE ***/
-/********************/
+/*** Zie About me & Design skills bij MAIN INDEX ***/
 
-/*** Zie About me & Design skills bij HOME PAGE ***/
+.aboutme .about-me h1 {
+    margin: 0;
+    padding: 2em 0 1.5em 0;
 
-.about .education h3,
-.about .workexp h3 {
-    margin-bottom: 1.5em;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 .education {
-    background-color: var(--text-dark);
-    color: var(--text-light);
-
+    background-color: var(--color-dark);
+    color: var(--color-light);
     padding-bottom: 3em;
 }
 
 .education i {
-    color: var(--text-light);
-}
-
-.education .vertical-line {
-    border-left: .25em solid var(--text-light);
-
-    height: inherit;
-
-
-    margin-left: 25%;
-    margin-right: 25%;
+    color: var(--color-light);
 }
 
 .education .vertical-line > div > div {
-    display: flex;
-    align-items: center;
-
-    height: 5em;
-    width: 61.5em;
+    border-bottom: .15em solid var(--color-light);
 }
 
-.education .vertical-line > div > div > div:last-of-type h4 {
-    margin-bottom: 1em;
+.education .vertical-line > div > div:last-of-type {
+    border: none;
 }
 
-.education .vertical-line h4 {
+.education .vertical-line > div > div:last-of-type > div:last-of-type p {
     margin: 0;
-    padding: 0;
 }
 
-.education .vertical-line p {
-    margin: 0;
-    padding: 0;
+.education .vertical-line > div > div > div:last-of-type p {
+    margin-bottom: 1.5em;
 }
 
-.education .vertical-line > div > div > div {
-    width: 25em;
-}
-
-.education .vertical-line > div > div > div:first-of-type {
-    position: absolute;
-
-    left: 24.8%;
-
-}
-
-.education .vertical-line > div > div > div > div:first-of-type {
+.education .vertical-line > div > div > div > div {
     display: flex;
     align-items: center;
-    gap: 1em;
-
-    height: 1em;
-
-    margin-bottom: 1em;
+    gap: 1.5em;
 }
-
-.education .vertical-line > div > div > div > div:first-of-type span {
-    display: inline-block;
-    width: .75em;
-    height: .75em;
-    background-color: var(--text-light);
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.education .vertical-line > div > div > div:last-of-type {
-    position: absolute;
-    right: 18%;
-}
-
-.education .vertical-line > div > div > div > div:last-of-type {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-
-    height: 1em;
-
-    margin-left: 3.5em;
-}
-
-
-
-
-
 
 
 
 
 .workexp {
-    background-color: var(--text-light);
-    color: var(--text-dark);
-
+    background-color: var(--color-light);
+    color: var(--color-dark);
     padding-bottom: 3em;
 }
 
 .workexp i {
-    color: var(--text-dark);
-}
-
-.workexp .vertical-line {
-    border-left: .25em solid var(--text-dark);
-
-    height: inherit;
-
-
-    margin-left: 25%;
-    margin-right: 25%;
+    color: var(--color-dark);
 }
 
 .workexp .vertical-line > div > div {
-    display: flex;
-    align-items: center;
-
-    height: 5em;
-    width: 61.5em;
+    border-bottom: .15em solid var(--color-dark);
 }
 
-.workexp .vertical-line > div > div > div:last-of-type h4 {
-    margin-bottom: 1em;
+.workexp .vertical-line > div > div:last-of-type {
+    border: none;
 }
 
-.workexp .vertical-line h4 {
+.workexp .vertical-line > div > div:last-of-type > div:last-of-type p {
     margin: 0;
-    padding: 0;
 }
 
-.workexp .vertical-line p {
-    margin: 0;
-    padding: 0;
+.workexp .vertical-line > div > div > div:last-of-type p {
+    margin-bottom: 1.5em;
 }
 
-.workexp .vertical-line > div > div > div {
-    width: 25em;
-}
-
-.workexp .vertical-line > div > div > div:first-of-type {
-    position: absolute;
-
-    left: 24.8%;
-
-}
-
-.workexp .vertical-line > div > div > div > div:first-of-type {
+.workexp .vertical-line > div > div > div > div {
     display: flex;
     align-items: center;
-    gap: 1em;
-
-    height: 1em;
-
-    margin-bottom: 1em;
-}
-
-.workexp .vertical-line > div > div > div > div:first-of-type span {
-    display: inline-block;
-    width: .75em;
-    height: .75em;
-    background-color: var(--text-dark);
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.workexp .vertical-line > div > div > div:last-of-type {
-    position: absolute;
-    right: 18%;
-}
-
-.workexp .vertical-line > div > div > div > div:last-of-type {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-
-    height: 1em;
-
-    margin-left: 3.5em;
-}
-
-
-
-
-
-
-
-
-
-.about .contact {
-    margin-top: 3em;
+    gap: 1.5em;
 }
 
 
@@ -804,10 +568,18 @@ textarea:focus {
 /*** PORTFOLIO PAGE ***/
 /**********************/
 
-/*** Zie Portfolio bij HOME PAGE ***/
+/*** Zie Portfolio bij MAIN INDEX ***/
 
-.portfolio footer {
-    margin-top: 10vh;
+.portfolio .projects h1 {
+    margin: 0;
+    padding: 2em 0 1.5em 0;
+
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.portfolio .projects {
+    margin-bottom: 69em;
 }
 
 
@@ -822,97 +594,149 @@ textarea:focus {
 /*** PROJECT 1 ***/
 /*****************/
 
-.project-loods5 main {
+.project1 main section:first-of-type {
     display: grid;
-    grid-template-columns: 1% 40% 50%;
-
-    column-gap: 4em;
-
-    padding: 3em 5em 0 2em;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    margin-top: 1.5em;
 }
 
-.project-loods5 main > div:first-of-type a i {
-    font-size: 2.5em;
-    color: var(--text-dark);
-
+.project1 main section:first-of-type a {
+    grid-row: 1;
     grid-column: 1;
+    text-decoration: none;
+    color: var(--color-dark);
 }
 
-.project-loods5 main > div:nth-of-type(2) {
+.project1 main section:first-of-type a i {
+    color: var(--color-dark);
+    font-size: 2.5em;
+}
+
+.project1 main section:first-of-type h1 {
+    margin: 0;
+    grid-row: 1;
     grid-column: 2;
 }
 
-.project-loods5 main div:nth-of-type(2) h2 {
-    font-size: 3em;
-    font-weight: 700;
-    line-height: .75;
-
-    margin-top: 0;
+.project1 main section:first-of-type h2 {
+    margin: 0;
+    padding: 0;
+    grid-row: 2;
+    grid-column: 2;
+    text-align: left;
+    color: var(--color-accent);
 }
 
-.project-loods5 main div:nth-of-type(2) h2 span {
-    color: var(--accent-color);
+.project1 main section:nth-of-type(2) {
+    margin-top: 1.5em;
 }
 
-.project-loods5 main div:nth-of-type(2) img {
-    width: 40em;
-
-    margin: 2.5em 0;
-
-    border-radius: 15px;
-    box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.25);
+.project1 main section:nth-of-type(2) img {
+    width: 100%;
 }
 
-.project-loods5 main div:nth-of-type(2) > div:first-of-type {
-    margin-bottom: 5em;
+.project1 main section:nth-of-type(2) > div:first-of-type {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 4;
 
-    display: flex;
-    gap: 3vw;
+    column-gap: 1em;
+    row-gap: 1em;
+
+    margin: 1.5em 0 3em 0;
 }
 
-.project-loods5 main div:nth-of-type(2) > div:nth-of-type(2) {
-    margin-bottom: 10em;
+.project1 main section:nth-of-type(2) > div:first-of-type p {
+    padding: 0;
+    margin: 0;
 
-    width: 30vw;
 }
 
-.project-loods5 main div:nth-of-type(2) > div:last-of-type p {
+.project1 main section:nth-of-type(2) > div:first-of-type p:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.project1 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.project1 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.project1 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.project1 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(5) {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.project1 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(6) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.project1 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(7) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.project1 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(8) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.project1 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(9) {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.project1 main section:nth-of-type(2) > div:first-of-type p:last-of-type {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.project1 main section:nth-of-type(2) > div:last-of-type {
+    margin-bottom: 3em;
+}
+
+.project1 main section:nth-of-type(2) > div:last-of-type p {
     font-weight: 600;
 }
 
-.project-loods5 main div:nth-of-type(2) > div:last-of-type a {
-    color: var(--text-dark);
-    text-decoration: none;
-
-    transition: .25s;
+.project1 main section:nth-of-type(3) {
+    margin-bottom: 3em;
 }
 
-.project-loods5 main div:nth-of-type(2) > div:last-of-type a:hover {
-    color: var(--hover);
-    text-decoration: underline;
-    text-decoration-color: var(--hover);
-
-    transition: .25s;
+.project1 main section:nth-of-type(3) h3 {
+    margin-top: 0;
 }
 
-.project-loods5 main > div:last-of-type {
-    grid-column: 3;
+.project1 main section:nth-of-type(3) img {
+    width: 100%;
 }
 
-.project-loods5 main > div:last-of-type h3 {
-    text-align: left;
-    font-size: 1.25em;
+.project1 main section:nth-of-type(3) img:first-of-type {
+    margin-bottom: 1.5em;
 }
 
-.project-loods5 main > div:last-of-type img {
-    width: 45vw;
-
-    margin: 0 0 5vh 1vw;
+.project1 main section:nth-of-type(3) h3:last-of-type {
+    margin-top: 2em;
 }
 
-.project-loods5 main > div:last-of-type img:first-of-type,
-.project-loods5 main > div:last-of-type img:nth-of-type(3) {
-    margin-top: 3vh;
+.project1 main section:nth-of-type(3) p:last-of-type {
+    margin: 1.5em 0 2em 0;
+}
+
+.project1 main section:nth-of-type(3) img:last-of-type {
+    margin-top: 1.5em;
 }
 
 
@@ -927,139 +751,1102 @@ textarea:focus {
 /*** PROJECT 2 ***/
 /*****************/
 
-.project-boekenzoeker main {
+.project2 main section:first-of-type {
     display: grid;
-    grid-template-columns: 1% 40% 50%;
-
-    column-gap: 4em;
-
-    padding: 3em 5em 0 2em;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    margin-top: 1.5em;
 }
 
-.project-boekenzoeker main > div:first-of-type a i {
-    font-size: 2.5em;
-    color: var(--text-dark);
-
+.project2 main section:first-of-type a {
+    grid-row: 1;
     grid-column: 1;
+    text-decoration: none;
+    color: var(--color-dark);
 }
 
-.project-boekenzoeker main > div:nth-of-type(2) {
+.project2 main section:first-of-type a i {
+    color: var(--color-dark);
+    font-size: 2.5em;
+}
+
+.project2 main section:first-of-type h1 {
+    margin: 0;
+    grid-row: 1;
     grid-column: 2;
 }
 
-.project-boekenzoeker main div:nth-of-type(2) h2 {
-    font-size: 3em;
-    font-weight: 700;
-    line-height: .75;
-
-    margin-top: 0;
+.project2 main section:first-of-type h2 {
+    margin: 0;
+    padding: 0;
+    grid-row: 2;
+    grid-column: 2;
+    text-align: left;
+    color: var(--color-accent);
 }
 
-.project-boekenzoeker main div:nth-of-type(2) h2 span {
-    color: var(--accent-color);
+.project2 main section:nth-of-type(2) {
+    margin-top: 1.5em;
 }
 
-.project-boekenzoeker main div:nth-of-type(2) img {
-    width: 40em;
-
-    margin: 2.5em 0;
-
-    border-radius: 15px;
-    box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.25);
+.project2 main section:nth-of-type(2) img {
+    width: 100%;
 }
 
-.project-boekenzoeker main div:nth-of-type(2) > div:first-of-type {
-    margin-bottom: 5em;
+.project2 main section:nth-of-type(2) > div:first-of-type {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 4;
 
-    display: flex;
-    gap: 3vw;
+    column-gap: 1em;
+    row-gap: 1em;
+
+    margin: 1.5em 0 3em 0;
 }
 
-.project-boekenzoeker main div:nth-of-type(2) > div:nth-of-type(2) {
-    margin-bottom: 10em;
+.project2 main section:nth-of-type(2) > div:first-of-type p {
+    padding: 0;
+    margin: 0;
 
-    width: 30vw;
 }
 
-.project-boekenzoeker main div:nth-of-type(2) > div:last-of-type p {
+.project2 main section:nth-of-type(2) > div:first-of-type p:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.project2 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.project2 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.project2 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.project2 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(5) {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.project2 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(6) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.project2 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(7) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.project2 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(8) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.project2 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(9) {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.project2 main section:nth-of-type(2) > div:first-of-type p:last-of-type {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.project2 main section:nth-of-type(2) > div:last-of-type {
+    margin-bottom: 3em;
+}
+
+.project2 main section:nth-of-type(2) > div:last-of-type p {
     font-weight: 600;
 }
 
-.project-boekenzoeker main div:nth-of-type(2) > div:last-of-type a {
-    color: var(--text-dark);
-    text-decoration: none;
-
-    transition: .25s;
+.project2 main section:nth-of-type(3) {
+    margin-bottom: 3em;
 }
 
-.project-boekenzoeker main div:nth-of-type(2) > div:last-of-type a:hover {
-    color: var(--hover);
-    text-decoration: underline;
-    text-decoration-color: var(--hover);
-
-    transition: .25s;
+.project2 main section:nth-of-type(3) h3 {
+    margin-top: 0;
 }
 
-.project-boekenzoeker main > div:last-of-type {
-    grid-column: 3;
-}
-
-.project-boekenzoeker main > div:last-of-type > div:nth-of-type(2) {
-    display: flex;
-    gap: 2vw;
-
-    margin-top: 3vh;
-}
-
-.project-boekenzoeker main > div:last-of-type > div:nth-of-type(2) img {
-    height: 15vw;
-
-    margin: 0;
-
-    border-radius: 15px;
-}
-
-.project-boekenzoeker main > div:last-of-type > div:nth-of-type(4) {
-    display: flex;
-    overflow-x: auto;
+.project2 main section:nth-of-type(3) img {
     width: 100%;
-    gap: 3vw;
 }
 
-.project-boekenzoeker main > div:last-of-type > div:nth-of-type(4)::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, .1);
-    border-radius: 1em;
+.project2 main section:nth-of-type(3) img:first-of-type {
+    margin-bottom: 1.5em;
 }
 
-.project-boekenzoeker main > div:last-of-type > div:nth-of-type(4)::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, .25);
+.project2 main section:nth-of-type(3) h3:last-of-type {
+    margin-top: 2em;
 }
 
-.project-boekenzoeker main > div:last-of-type > div:nth-of-type(4) img {
-    height: 35vh;
+.project2 main section:nth-of-type(3) p:last-of-type {
+    margin: 1.5em 0 2em 0;
+}
 
-    width: auto;
+.project2 main section:nth-of-type(3) div:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    border-radius: 15px;
-
+.project2 main section:nth-of-type(3) div:last-of-type img {
+    width: 30%;
     margin: 0;
-    margin: 3vh 0;
-}
-
-.project-boekenzoeker main > div:last-of-type > div:last-of-type {
-    margin-top: 8vh;
-}
-
-.project-boekenzoeker main > div:last-of-type > img {
-    width: 45vw;
-
-    border-radius: 15px;
-
-    margin: 3vh 0 5vh 1vw;
 }
 
 
-.project-boekenzoeker main > div:last-of-type h3 {
+
+
+
+
+
+
+
+/*****************/
+/*** PROJECT 3 ***/
+/*****************/
+
+.project3 main section:first-of-type {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    margin-top: 1.5em;
+}
+
+.project3 main section:first-of-type a {
+    grid-row: 1;
+    grid-column: 1;
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.project3 main section:first-of-type a i {
+    color: var(--color-dark);
+    font-size: 2.5em;
+}
+
+.project3 main section:first-of-type h1 {
+    margin: 0;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.project3 main section:first-of-type h2 {
+    margin: 0;
+    padding: 0;
+    grid-row: 2;
+    grid-column: 2;
     text-align: left;
+    color: var(--color-accent);
+}
+
+.project3 main section:nth-of-type(2) {
+    margin-top: 1.5em;
+}
+
+.project3 main section:nth-of-type(2) img {
+    width: 100%;
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 4;
+
+    column-gap: 1em;
+    row-gap: 1em;
+
+    margin: 1.5em 0 3em 0;
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type p {
+    padding: 0;
+    margin: 0;
+
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type p:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(4) {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(5) {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(6) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(7) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(8) {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type p:nth-of-type(9) {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.project3 main section:nth-of-type(2) > div:first-of-type p:last-of-type {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+.project3 main section:nth-of-type(2) > div:last-of-type {
+    margin-bottom: 3em;
+}
+
+.project3 main section:nth-of-type(2) > div:last-of-type p {
+    font-weight: 600;
+}
+
+.project3 main section:nth-of-type(3) {
+    margin-bottom: 3em;
+}
+
+.project3 main section:nth-of-type(3) h3 {
+    margin-top: 0;
+}
+
+.project3 main section:nth-of-type(3) img {
+    width: 100%;
+}
+
+.project3 main section:nth-of-type(3) img:first-of-type {
+    margin-bottom: 1.5em;
+}
+
+.project3 main section:nth-of-type(3) h3:last-of-type {
+    margin-top: 2em;
+}
+
+.project3 main section:nth-of-type(3) p:last-of-type {
+    margin: 1.5em 0 2em 0;
+}
+
+.project3 main section:nth-of-type(3) div:last-of-type {}
+
+.project3 main section:nth-of-type(3) div:last-of-type img {
+    width: 30%;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+/*****************/
+/**** FOOTER ****/
+/****************/
+
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-light);
+}
+
+footer > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 1.25em;
+    font-weight: 600;
+    padding: 0 1em 0 1em;
+}
+
+footer > div:first-of-type a:nth-of-type(2) {
+    font-size: 1.5em;
+    color: var(--color-accent);
+}
+
+footer > div:first-of-type a:nth-of-type(2) span {
+    color: var(--color-light);
+    margin-right: -.2em;
+}
+
+footer > div:last-of-type {
+    text-align: center;
+}
+
+footer > div:last-of-type > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 8em 1.5em;
+}
+
+footer > div:last-of-type > div img {
+    height: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+/***************************/
+/***************************/
+/* MEDIA QUERY SCREEN SIZES*/
+/***************************/
+/***************************/
+
+/* Voor Tablets en iPads */
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        margin: 0;
+
+        background-color: var(--color-light);
+
+        font-family: var(--text);
+        color: var(--color-dark);
+    }
+
+    h2 {
+        margin: 0;
+        padding: 2em 0 1.5em 0;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.25em;
+    }
+
+    header {
+        margin: 0;
+        padding: 0 1em;
+
+        font-size: 1.25em;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+        align-items: center;
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .menu {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .menulist {
+        display: flex;
+        justify-content: flex-start;
+        gap: 3em;
+    }
+
+    .menulist li a {
+        font-weight: 600;
+    }
+
+    header .logo {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+
+
+
+
+
+
+
+
+    /********************/
+    /**** MAIN INDEX ****/
+    /********************/
+
+    section {
+        padding: 0 1.5em;
+    }
+
+
+
+
+    /* About Me */
+
+    /*Geen aanpassingen*/
+
+
+
+
+    /* Design Skills */
+
+    /*Geen aanpassingen*/
+
+
+
+
+    /* Portfolio */
+
+    .projects {
+        margin-bottom: 121em;
+    }
+
+    .items {
+        position: absolute;
+        top: 75%;
+
+        margin: 0 1em;
+    }
+
+    #loods5 > div > div h3,
+    #doededate > div > div h3,
+    #projectinteractie > div > div h3 {
+        font-size: 1.25em;
+    }
+
+    #loods5 > div > div p,
+    #doededate > div > div p,
+    #projectinteractie > div > div p {
+        margin: 0.75em 0;
+    }
+
+    #loods5 i,
+    #doededate i,
+    #projectinteractie i {
+        color: var(--color-light);
+        font-size: 1.5em;
+
+        background-color: var(--color-hover);
+
+        padding: .75em;
+
+        border-radius: 250px;
+
+        transform: rotate(-45deg)
+    }
+
+
+
+
+    /* Contact Opnemen */
+
+    .contact > p {
+        width: 60%;
+        line-height: 1.75em;
+    }
+
+    .contact > div:first-of-type > div i {
+        font-size: 1.25em;
+    }
+
+
+
+
+
+
+
+
+
+    /******************/
+    /**** ABOUT ME ****/
+    /******************/
+
+    /*** Zie About me & Design skills bij MAIN INDEX ***/
+
+    .education h2,
+    .workexp h2 {
+        padding-bottom: 1em;
+    }
+
+    .education h4,
+    .workexp h4 {
+        font-size: 1.25em;
+    }
+
+    .education i,
+    .workexp i {
+        font-size: 1.25em;
+    }
+
+
+
+
+
+
+
+
+
+    /**********************/
+    /*** PORTFOLIO PAGE ***/
+    /**********************/
+
+    /*** Zie Portfolio bij MAIN INDEX ***/
+
+    .portfolio .projects {
+        margin-bottom: 121em;
+    }
+
+
+
+
+
+
+
+
+
+    /*****************/
+    /*** PROJECT 1 ***/
+    /*****************/
+
+    .project1 main section:first-of-type h1,
+    .project1 main section:first-of-type h2 {
+        margin-right: 10em;
+    }
+
+    .project1 main section:first-of-type h1 {
+        font-size: 2em;
+        margin-bottom: .5em;
+    }
+
+    .project1 main section:first-of-type h2 {
+        margin-bottom: .5em;
+    }
+
+    .project1 main section:nth-of-type(2) div:last-of-type a {
+        font-size: 1.25em;
+    }
+
+    .project1 main section:last-of-type div:nth-of-type(2),
+    .project1 main section:last-of-type div:last-of-type {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .project1 main section:last-of-type div:nth-of-type(2) img,
+    .project1 main section:last-of-type div:last-of-type img {
+        width: 48%;
+        margin: 0
+    }
+
+
+
+
+
+
+
+
+
+    /*****************/
+    /*** PROJECT 2 ***/
+    /*****************/
+
+    .project2 main section:first-of-type h1,
+    .project2 main section:first-of-type h2 {
+        margin-right: 10em;
+    }
+
+    .project2 main section:first-of-type h1 {
+        font-size: 2em;
+        margin-bottom: .5em;
+    }
+
+    .project2 main section:first-of-type h2 {
+        margin-bottom: .5em;
+    }
+
+    .project2 main section:nth-of-type(2) div:last-of-type a {
+        font-size: 1.25em;
+    }
+
+
+
+
+
+
+
+
+
+    /*****************/
+    /*** PROJECT 3 ***/
+    /*****************/
+
+    .project3 main section:first-of-type h1,
+    .project3 main section:first-of-type h2 {
+        margin-right: 10em;
+    }
+
+    .project3 main section:first-of-type h1 {
+        font-size: 2em;
+        margin-bottom: .5em;
+    }
+
+    .project3 main section:first-of-type h2 {
+        margin-bottom: .5em;
+    }
+
+    .project3 main section:nth-of-type(2) div:last-of-type a {
+        font-size: 1.25em;
+    }
+
+
+
+
+
+
+
+
+
+    /*****************/
+    /**** FOOTER ****/
+    /****************/
+
+    footer > div:first-of-type {
+        padding: 0 5em;
+    }
+
+    footer > div:last-of-type > div {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1.5em 10em 2em;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Voor iPad Pro */
+
+@media only screen and (min-width: 1024px) {
+
+    .projects {
+        margin-bottom: 155em;
+    }
+
+    .portfolio .projects {
+        margin-bottom: 155em;
+    }
+
+    .project1 main > section:first-of-type h1,
+    .project1 main > section:first-of-type h2,
+    .project2 main > section:first-of-type h1,
+    .project2 main > section:first-of-type h2,
+    .project3 main > section:first-of-type h1,
+    .project3 main > section:first-of-type h2 {
+        margin-right: 15em;
+    }
+
+    footer > div:first-of-type {
+        padding: 0 5em;
+    }
+
+    footer > div:last-of-type > div {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1.5em 18em 2em;
+    }
+}
+
+
+
+
+
+/* Voor Laptops en "kleine" Desktops */
+
+@media only screen and (min-width: 1920px) {
+
+    header {
+        padding: 0;
+    }
+
+    header > div {
+        margin: 0 2em;
+    }
+
+    .menu ul li a {
+        transition: .5s ease-in;
+    }
+
+    .menu ul li a:hover {
+        color: var(--color-hover);
+
+        transition: .5s ease-in;
+    }
+
+    main > section {
+        padding: 0 4em;
+    }
+
+    .ux-ui {
+        display: flex;
+        gap: 25em;
+    }
+
+    .ux-ui > div:last-of-type {
+        width: 60%;
+        align-content: flex-end;
+    }
+
+    .ux-ui img {
+        display: block;
+        width: 90%;
+    }
+
+    .ux-ui p:last-of-type {
+        line-height: 1.75em;
+    }
+
+    .about-me p {
+        padding: 0 5em;
+    }
+
+    .design-skills > p {
+        padding: 0 5em;
+    }
+
+    .design-skills .skills {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8em;
+        margin-bottom: 3em;
+    }
+
+    .design-skills .skills .links {
+        width: 100%;
+    }
+
+    .design-skills .skills .links div:first-of-type {
+        margin: 0;
+    }
+
+    .design-skills .skills .rechts {
+        width: 100%;
+
+        margin: 0;
+    }
+
+    .projects {
+        margin-bottom: 100em;
+    }
+
+    .projects > div > p {
+        margin: 0 9em;
+        padding: 0;
+    }
+
+    .projects .items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: .5em 2em;
+
+        margin: 0 4em;
+
+        top: 70%;
+    }
+
+    .projects .items img {
+        min-height: 670px;
+        max-height: 750px;
+    }
+
+    .projects .items #loods5 > div,
+    .projects .items #doededate > div,
+    .projects .items #projectinteractie > div {
+        display: block;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+        transition: background 0.5s ease-in;
+    }
+
+    .projects .items #loods5:hover > div,
+    .projects .items #doededate:hover > div,
+    .projects .items #projectinteractie:hover > div {
+        background: linear-gradient(135deg, rgba(0, 23, 153, 0.4), rgba(0, 23, 153, 0.1));
+        transition: background 0.5s ease-in;
+    }
+
+    .portfolio .projects {
+        margin-bottom: 100em;
+    }
+
+    .project1 main > section:first-of-type h1,
+    .project1 main > section:first-of-type h2,
+    .project2 main > section:first-of-type h1,
+    .project2 main > section:first-of-type h2,
+    .project3 main > section:first-of-type h1,
+    .project3 main > section:first-of-type h2 {
+        margin-right: 10em;
+    }
+
+
+    .project1 main {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+
+    .project1 main section:nth-of-type(2) {
+        grid-row: 2;
+        grid-column: span 2;
+
+        display: grid;
+        gap: 0 5em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .project1 main section:nth-of-type(2) img {
+        grid-row: span 3;
+        grid-column: 1;
+
+        margin: 1em 0;
+    }
+
+    .project1 main section:nth-of-type(2) div:first-of-type {
+        grid-row: 1;
+        grid-column: 2;
+
+        height: 40%;
+    }
+
+    .project1 main section:nth-of-type(2) div:nth-of-type(2) {
+        grid-row: 2;
+        grid-column: 2;
+
+        height: 20%;
+    }
+
+    .project1 main section:nth-of-type(2) div:last-of-type {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    .project1 main section:last-of-type {
+        grid-row: 3;
+        grid-column: span 2;
+
+        display: grid;
+        gap: 2em 3em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .project1 main section:last-of-type div:last-of-type img:first-of-type {
+        width: 80%;
+        margin: 2em 0 0 5em;
+    }
+
+    .project1 main section:last-of-type div:last-of-type img:last-of-type {
+        display: none;
+    }
+
+
+
+
+    .project2 main {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .project2 main section:nth-of-type(2) {
+        grid-row: 2;
+        grid-column: span 2;
+
+        display: grid;
+        gap: 0 5em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .project2 main section:nth-of-type(2) img {
+        grid-row: span 3;
+        grid-column: 1;
+
+        margin: 1em 0;
+    }
+
+    .project2 main section:nth-of-type(2) div:first-of-type {
+        grid-row: 1;
+        grid-column: 2;
+
+        height: 40%;
+    }
+
+    .project2 main section:nth-of-type(2) div:nth-of-type(2) {
+        grid-row: 2;
+        grid-column: 2;
+
+        height: 20%;
+    }
+
+    .project2 main section:nth-of-type(2) div:last-of-type {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    .project2 main section:last-of-type {
+        grid-row: 3;
+        grid-column: span 2;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 2em;
+    }
+
+    .project2 main section:last-of-type div:first-of-type,
+    .project2 main section:last-of-type div:nth-of-type(2) {
+        width: 80%;
+    }
+
+    .project2 main section:last-of-type > img {
+        width: 70%;
+
+        margin-left: 5em;
+    }
+
+
+
+
+    .project3 main {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .project3 main section:nth-of-type(2) {
+        grid-row: 2;
+        grid-column: span 2;
+
+        display: grid;
+        gap: 0 5em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .project3 main section:nth-of-type(2) img {
+        grid-row: span 3;
+        grid-column: 1;
+
+        margin: 1em 0;
+    }
+
+    .project3 main section:nth-of-type(2) div:first-of-type {
+        grid-row: 1;
+        grid-column: 2;
+
+        height: 40%;
+    }
+
+
+
+
+    footer > div:first-of-type {
+        padding: 0 25em;
+    }
+
+    footer > div:last-of-type > div {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1.5em 50em 2em;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* Voor "grote" Desktops */
+
+@media only screen and (min-width: 2560px) {
+
+    .menulist {
+        gap: 5em;
+    }
+
+    .skills {
+        margin: 5em 3em;
+    }
+
+    .projects {
+        height: 30vh;
+        margin-bottom: 110em;
+    }
+
+    .portfolio .projects {
+        height: 30vh;
+        margin-bottom: 110em;
+    }
+
+
+
+
+    footer > div:first-of-type {
+        padding: 0 45em;
+    }
+
+    footer > div:last-of-type > div {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 4em 65em;
+    }
 }

@@ -52,7 +52,7 @@ p {
 
 
 [id] {
-    scroll-margin-top: 6em;
+    scroll-margin-top: 5em;
 }
 
 
@@ -67,6 +67,9 @@ header {
     background-color: var(--accent);
     margin: 0;
     padding: 1.5em 3.5em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header > div {
@@ -94,11 +97,6 @@ header a {
     font-size: var(--30);
     margin: 0;
     text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-header a:hover {
-    color: var(--hover);
 }
 
 header ul {
@@ -122,7 +120,8 @@ header li a {
 }
 
 header li a:hover {
-    color: var(--hover);
+    color: var(--default);
+    text-decoration: underline;
 }
 
 
@@ -174,6 +173,8 @@ header li a:hover {
     background-color: var(--text);
     color: var(--background);
     padding: 3.5em;
+    display: flex;
+    justify-content: center;
 }
 
 .about-me p {
@@ -190,7 +191,7 @@ header li a:hover {
 
 
 .design-skills {
-    padding: 3.5em 3.5em;
+    padding: 3.5em;
 }
 
 .design-skills p {
@@ -343,8 +344,8 @@ footer h2 span {
 
 footer > div {
     display: flex;
-    justify-content: space-evenly;
-    gap: 2em;
+    justify-content: center;
+    gap: 10em;
     margin-bottom: 2.5em;
 }
 

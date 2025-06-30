@@ -55,6 +55,9 @@ header {
     background-color: var(--accent);
     margin: 0;
     padding: 1.5em 3.5em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header > div {
@@ -82,11 +85,6 @@ header a {
     font-size: var(--30);
     margin: 0;
     text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-header a:hover {
-    color: var(--hover);
 }
 
 header ul {
@@ -110,10 +108,72 @@ header li a {
 }
 
 header li a:hover {
-    color: var(--hover);
+    color: var(--default);
+    text-decoration: underline;
 }
 
 
+
+
+
+
+
+
+
+
+main > div:first-of-type {
+    display: flex;
+    align-items: baseline;
+    gap: 3em;
+    margin: 0;
+    padding: 3.5em 3.5em 1.5em;
+}
+
+main > div > a {
+    font-size: var(--36);
+    font-weight: var(--medium);
+    text-decoration: none;
+    color: var(--text);
+    transition: color 0.3s ease, text-decoration 0.3s ease
+}
+
+main > div > a:hover {
+    text-decoration: underline;
+    color: var(--default);
+}
+
+main > div:first-of-type span {
+    color: var(--default);
+}
+
+
+
+
+main > div:last-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    margin: 0;
+    padding: 0 3.5em 3.5em;
+}
+
+main > div:last-of-type img {
+    margin: 0;
+    padding: 0;
+}
+
+main > div:last-of-type .links img {
+    border-radius: 0.5em;
+}
+
+main > div:last-of-type .rechts h3:first-of-type {
+    margin: 0;
+    padding: 0;
+}
+
+main > div:last-of-type .rechts img:nth-of-type(2){
+    padding-left: 2em;
+}
 
 
 
@@ -141,8 +201,8 @@ footer h2 span {
 
 footer > div {
     display: flex;
-    justify-content: space-evenly;
-    gap: 2em;
+    justify-content: center;
+    gap: 10em;
     margin-bottom: 2.5em;
 }
 

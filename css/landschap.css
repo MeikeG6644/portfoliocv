@@ -54,7 +54,7 @@ p {
 header {
     background-color: var(--accent);
     margin: 0;
-    padding: 2.5em 3.5em 0;
+    padding: 1.5em 3.5em;
 }
 
 header > div {
@@ -76,11 +76,17 @@ header > div div:last-of-type {
     text-align: end;
 }
 
-header p {
+header a {
     color: var(--default);
     font-weight: var(--semibold);
     font-size: var(--30);
     margin: 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: var(--hover);
 }
 
 header ul {

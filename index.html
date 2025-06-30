@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Meike-Gravesteijn-Portfolio</title>
+    <title>Meike-Gravesteijn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,7 +18,7 @@
     <link rel="icon" href="images/logo.png">
 </head>
 
-<body>
+<body id="top">
     <header>
         <div class="navbar">
             <div class="toggle">
@@ -28,14 +28,14 @@
             </div>
 
             <div>
-                <p>Meike</p>
+                <a href="#top">Meike</a>
             </div>
 
             <div class="menu">
                 <ul class="menulist">
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="about-me.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -54,7 +54,7 @@
             </div>
         </section>
 
-        <section class="about-me">
+        <section class="about-me" id="about">
             <div>
                 <h2>About me</h2>
                 <p>Ik houd me graag bezig met vormgeving, interaction design en 3D-visualisatie. De programma’s waar ik het beste mee kan werken zijn Adobe XD, Adobe Illustrator, HTML/CSS en Blender.</p>
@@ -175,7 +175,7 @@
             </div>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <h2>Portfolio</h2>
 
             <div class="projects">
@@ -224,7 +224,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="contact">
         <h2>Get in touch<span>●</span></h2>
 
         <div>
@@ -251,4 +251,6 @@
 
         <p>© Meike Gravesteijn - 2025</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body></html>

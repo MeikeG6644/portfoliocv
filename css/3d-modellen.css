@@ -155,12 +155,14 @@ main > div:last-of-type {
     padding: 0 3.5em 3.5em;
 }
 
-main > div .links img {
-    border-radius: 0.5em;
-    width: 45em;
-
+main > div:last-of-type img {
     margin: 0;
     padding: 0;
+}
+
+.links a img {
+    border-radius: 0.5em;
+    width: 45em;
 }
 
 main > div:last-of-type .rechts h3:first-of-type {
@@ -168,16 +170,36 @@ main > div:last-of-type .rechts h3:first-of-type {
     padding: 0;
 }
 
-
-.rechts div {
-    display: flex;
-    gap: 4em;
-    justify-content: center;
-    margin: 1.75em 0 2.5em;
+.links img {
+    border: 1px solid black;
 }
 
+.links a {
+    text-decoration: none;
+    color: var(--default);
+}
+
+.links a:hover {
+    color: var(--hover);
+    text-decoration: underline;
+    transition: color 0.5s ease;
+}
+
+.links div:first-of-type {
+    display: flex;
+    gap: 3em;
+}
+
+.links div a:first-of-type img,
+.links div a:last-of-type img {
+    width: 28em;
+    border: 1px solid black;
+    border-radius: 0px;
+}
+
+
 .rechts img {
-    width: 25%;
+    height: 15em;
     border: 1px solid black;
 }
 

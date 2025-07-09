@@ -109,7 +109,6 @@ header li a {
 
 header li a:hover {
     color: var(--default);
-    text-decoration: underline;
 }
 
 
@@ -138,7 +137,6 @@ main > div > a {
 }
 
 main > div > a:hover {
-    text-decoration: underline;
     color: var(--default);
 }
 
@@ -152,23 +150,50 @@ main > div:first-of-type span {
 main > div:last-of-type {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3em;
+    gap: 5em;
     margin: 0;
     padding: 0 3.5em 3.5em;
 }
 
-main > div:last-of-type img {
+main > div .links img {
+    border-radius: 0.5em;
+    width: 45em;
+
     margin: 0;
     padding: 0;
-}
-
-main > div:last-of-type .links img {
-    border-radius: 0.5em;
 }
 
 main > div:last-of-type .rechts h3:first-of-type {
     margin: 0;
     padding: 0;
+}
+
+
+.rechts div {
+    display: flex;
+    gap: 4em;
+    justify-content: center;
+    margin: 1.75em 0 2.5em;
+}
+
+.rechts img {
+    height: 15em;
+    border: 1px solid black;
+}
+
+.rechts p:last-of-type {
+    margin-bottom: 3em;
+}
+
+.rechts a {
+    text-decoration: none;
+    color: var(--default);
+}
+
+.rechts a:hover {
+    color: var(--hover);
+    text-decoration: underline;
+    transition: color 0.5s ease;
 }
 
 

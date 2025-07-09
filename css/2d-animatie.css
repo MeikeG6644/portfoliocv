@@ -155,17 +155,35 @@ main > div:last-of-type {
     padding: 0 3.5em 3.5em;
 }
 
-main > div .links img {
-    border-radius: 0.5em;
-    width: 45em;
-
+main > div:last-of-type img {
     margin: 0;
     padding: 0;
+}
+
+main > div:last-of-type .links > img:first-of-type {
+    border-radius: 0.5em;
+        width: 45em;
 }
 
 main > div:last-of-type .rechts h3:first-of-type {
     margin: 0;
     padding: 0;
+}
+
+.links div:last-of-type img {
+    width: 55%;
+    border: 1px solid black;
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--default);
+}
+
+.links a:hover {
+    color: var(--hover);
+    text-decoration: underline;
+    transition: color 0.5s ease;
 }
 
 
@@ -177,7 +195,7 @@ main > div:last-of-type .rechts h3:first-of-type {
 }
 
 .rechts img {
-    width: 25%;
+    height: 15em;
     border: 1px solid black;
 }
 
